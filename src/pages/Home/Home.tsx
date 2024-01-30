@@ -3,6 +3,7 @@ import { Particles, initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 import particlesConfig from '@/assets/json/particles.json';
+import Menu from '@/components/Menu/Menu'
 
 import './Home.scss';
 
@@ -19,13 +20,14 @@ function Home() {
     }, []);
 
     return (
-        <div className="App">
+        <section className={'home'}>
+            <Menu />
             <Particles
                 data-test-id={'particles'}
                 id="tsparticles"
                 options={particlesConfig}
             />
-        </div>
+        </section>
     );
 }
 

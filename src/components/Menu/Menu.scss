@@ -1,0 +1,34 @@
+@import "./../../index";
+
+.container {
+    & menu {
+        margin-top: 50px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+
+        & li {
+            padding: 10px 40px 10px 0;
+            color: $white;
+            cursor: pointer;
+            position: relative;
+            font-weight: bold;
+
+            &::after {
+                content: "";
+                height: 3px;
+                width: 0;
+                background: $primary-color;
+                border-radius: 5px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: all .3s ease-in-out;
+            }
+
+            &:hover::after, &.active::after {
+                width: 30px;
+            }
+        }
+    }
+}

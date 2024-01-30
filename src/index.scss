@@ -1,9 +1,11 @@
 $primary-color: #e1e8ed;
+$white: #ffffff;
 
 * {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -21,4 +23,13 @@ code {
 
 ul, ol, li {
     list-style: none;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
 }
